@@ -1,0 +1,25 @@
+@model List<Producto>
+
+<h1>Lista de Producto</h1>
+
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Nombre del Producto</th>
+      <th scope="col">Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+        @foreach (var item in Model)
+        {   
+            <tr>
+            <th scope="row">@item.Id</th>
+            <td>@item.Usuario</td>
+            <td>@item.Nombre</td>
+            <td>@item.Precio</td>
+            </tr>
+        }
+  </tbody>
+</table>
